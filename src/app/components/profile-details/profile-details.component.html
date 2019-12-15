@@ -1,0 +1,106 @@
+<form class="form" method="" action="">
+  <div class="row justify-content-center">
+    <div class="col-md-2 col-4">
+      <label>PS No.:</label>
+    </div>
+    <div class="col-md-4 col-8">
+      <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="now-ui-icons business_badge"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" placeholder="PS No..." (focus)="focus=true" (blur)="focus=false">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-2 col-4">
+      <label>Full Name:</label>
+    </div>
+    <div class="col-md-4 col-8">
+      <div class="input-group" [ngClass]="{'input-group-focus':focus1===true}">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="now-ui-icons users_circle-08"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" placeholder="Full Name..." (focus)="focus1=true" (blur)="focus1=false">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-2 col-4">
+      <label>Mobile:</label>
+    </div>
+    <div class="col-md-4 col-8">
+      <div class="input-group" [ngClass]="{'input-group-focus':focus2===true}">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="now-ui-icons tech_mobile"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" placeholder="Mobile..." (focus)="focus2=true" (blur)="focus2=false">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-2 col-4">
+      <label>Email:</label>
+    </div>
+    <div class="col-md-4 col-8">
+      <div class="input-group" [ngClass]="{'input-group-focus':focus3===true}">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="now-ui-icons ui-1_email-85"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" placeholder="Email..." (focus)="focus3=true" (blur)="focus3=false">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-2 col-4">
+      <label>Password:</label>
+    </div>
+    <div class="col-md-4 col-8">
+      <div class="input-group" [ngClass]="{'input-group-focus':focus4===true}">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="now-ui-icons text_caps-small"></i>
+          </span>
+        </div>
+        <input type="text" placeholder="Password..." class="form-control" (focus)="focus4=true" (blur)="focus4=false" />
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-2 col-4">
+      <label>Confirm Password:</label>
+    </div>
+    <div class="col-md-4 col-8">
+      <div class="input-group" [ngClass]="{'input-group-focus':focus5===true}">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="now-ui-icons text_caps-small"></i>
+          </span>
+        </div>
+        <input type="text" placeholder="Confirm Password..." class="form-control" (focus)="focus5=true"
+          (blur)="focus5=false" />
+      </div>
+
+    </div>
+  </div>
+
+
+</form>

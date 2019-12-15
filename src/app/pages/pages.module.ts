@@ -13,6 +13,8 @@ import { PagesComponent } from './pages.component';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from 'app/shared/navbar/navbar.component';
+import { ProfileDetailsComponent } from 'app/components/profile-details/profile-details.component';
+import { WishlistDetailsComponent } from 'app/components/wishlist-details/wishlist-details.component';
 
 @NgModule({
     imports: [
@@ -30,7 +32,9 @@ import { NavbarComponent } from 'app/shared/navbar/navbar.component';
     declarations: [
         PagesComponent,
         DashboardComponent,
-        NavbarComponent
+        NavbarComponent,
+        ProfileDetailsComponent,
+        WishlistDetailsComponent
     ]
 })
 export class PagesModule { }

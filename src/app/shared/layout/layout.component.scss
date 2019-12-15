@@ -1,6 +1,7 @@
 .animation{
     opacity: 0;
     animation: fadeIn .35s ease 1.7s forwards;
+    position:fixed;
 }
 
 .snowBg{
@@ -15,4 +16,18 @@
     0%{background-position:0 0,0 0,0 0}
     50%{background-position:500px 500px,100px 200px,-100px 150px}
     to{background-position:500px 1000px,200px 400px,-100px 300px}
+}
+
+.page-header {
+.container{
+    min-height: 100vh;
+    height: 100%;
+}
+}
+
+.page-header{
+    min-height: 100vh;
+    height: 100%;
+    max-height:100%;
+
 }

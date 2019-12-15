@@ -1,0 +1,27 @@
+::ng-deep .tab-pane{
+    color:#2c2c2c;
+}
+
+.form-control{
+    height: auto;
+}
+
+.section {
+    padding: 20px 0;
+
+.row .col-4{
+    text-align: right !important;
+}
+
+    .form label{
+        margin-top: 10px;
+        font-weight: bold;
+        
+    }
+    .form label, 
+    .form input,
+    .form select
+    {
+        font-size: 12px;
+    }
+}
