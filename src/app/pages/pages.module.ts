@@ -10,6 +10,9 @@ import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { PagesComponent } from './pages.component';
+import { RouterModule } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NavbarComponent } from 'app/shared/navbar/navbar.component';
 
 @NgModule({
     imports: [
@@ -18,14 +21,16 @@ import { PagesComponent } from './pages.component';
         NgbModule,
         NouisliderModule,
         JwBootstrapSwitchNg2Module,
+        RouterModule,
+        // PagesRoutingModule,
         // AgmCoreModule.forRoot({
         //     apiKey: 'YOUR_KEY_HERE'
         // })
     ],
     declarations: [
-        LoginComponent,
         PagesComponent,
-        RegistrationComponent
+        DashboardComponent,
+        NavbarComponent
     ]
 })
 export class PagesModule { }

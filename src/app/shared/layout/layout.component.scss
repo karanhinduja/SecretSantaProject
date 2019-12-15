@@ -1,0 +1,18 @@
+.animation{
+    opacity: 0;
+    animation: fadeIn .35s ease 1.7s forwards;
+}
+
+.snowBg{
+
+    background-image: url(https://www.secretsantaorganizer.com/build/images/s1.4adb61ee.png),url(https://www.secretsantaorganizer.com/build/images/s2.5582bf49.png),url(https://www.secretsantaorganizer.com/build/images/s3.91271c34.png);
+    animation: snow 10s linear infinite;
+    height: 100%;
+    width: 100%;
+}
+@keyframes snow
+{
+    0%{background-position:0 0,0 0,0 0}
+    50%{background-position:500px 500px,100px 200px,-100px 150px}
+    to{background-position:500px 1000px,200px 400px,-100px 300px}
+}

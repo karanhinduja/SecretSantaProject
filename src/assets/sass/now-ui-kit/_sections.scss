@@ -48,7 +48,7 @@
         text-align: center;
         position: relative;
 
-        > .content-center{
+         .content-center{
             position: absolute;
             top: 50%;
             left: 50%;
@@ -64,10 +64,10 @@
             max-width: 880px;
         }
     }
-    .category,
-    .description{
-        color: $opacity-5;
-    }
+    // .category,
+    // .description{
+    //     color: $opacity-5;
+    // }
 
     &.page-header-small{
         min-height: 60vh;

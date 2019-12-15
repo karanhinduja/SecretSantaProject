@@ -5,15 +5,23 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
-import { ExamplesModule } from './examples/examples.module';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
+// import { NavbarComponent } from './shared/navbar/navbar.component';
+import { LayoutComponent } from './shared/layout/layout.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegistrationComponent } from './pages/registration/registration.component';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
     declarations: [
         AppComponent,
-        NavbarComponent
+        // NavbarComponent,
+        LayoutComponent,
+        FooterComponent,
+        LoginComponent,
+        RegistrationComponent,
     ],
     imports: [
         BrowserAnimationsModule,
@@ -22,7 +30,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
         RouterModule,
         AppRoutingModule,
         ComponentsModule,
-        ExamplesModule
+        PagesModule
     ],
     providers: [],
     bootstrap: [AppComponent]

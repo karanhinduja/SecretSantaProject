@@ -1,0 +1,12 @@
+<!-- <app-navbar></app-navbar> -->
+<div class="page-header" filter-color="orange">
+    <div class="page-header-image animation" style="background-image:url(assets/img/bg7.jpg)">
+    <div class=snowBg></div>
+    </div>
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+    <app-footer *ngIf="!showOutterFooter"></app-footer>
+</div>
+<div style="clear:both; height:400px;" *ngIf="showOutterFooter"></div>
+<app-footer *ngIf="showOutterFooter"></app-footer>
