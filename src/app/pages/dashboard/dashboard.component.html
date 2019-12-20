@@ -8,14 +8,18 @@
             <div class=section>
               <p class="category"><u>Fill Your Wish List below</u></p>
 
-              <app-wishlist-details></app-wishlist-details>
+              <app-wishlist-details *ngIf="showSelfWishList" 
+                                    [wishlist]="SelfWishList" 
+                                    [enableAction]="true"
+                                    (emitOnSubmit)="SaveWishList($event)"></app-wishlist-details>
 
             </div>
 
             <div class="section">
               <p class="category"><u>Profile</u></p>
 
-              <app-profile-details></app-profile-details>
+              <app-profile-details *ngIf="showSelfProfile" [profiledata]="SelfProfile" 
+              [enableAction]="true" (emitOnSubmit)="SaveProfile($event)"></app-profile-details>
 
             </div>
           </ng-template>
@@ -26,7 +30,7 @@
             <div class=section>
               <p class="category"><u>Wish List of Your Recipient is below</u></p>
 
-              <app-wishlist-details></app-wishlist-details>
+              <app-wishlist-details *ngIf="showRecipientWishList" [wishlist]="RecipientWishList" ></app-wishlist-details>
 
             </div>
 
@@ -34,7 +38,22 @@
               <p class="category"><u>Profile Details of Your Recipient</u></p>
 
               <p><b>The Profile Details of Your Recipient will be Revealed on the Last day</b></p>
-              <app-profile-details></app-profile-details>
+              <app-profile-details *ngIf="showRecipientProfile" [profiledata]="RecipientProfile"></app-profile-details>
+
+            </div>
+
+          </ng-template>
+        </ngb-tab>
+
+        <ngb-tab title="Your Secret Santa Details">
+          <ng-template ngbTabContent>
+
+            <div class="section">
+              <p class="category"><u>Profile Details of Your Secret Santa</u></p>
+
+              <p><b>The Profile Details of Your Secret Santa will be Revealed on the Last day</b></p>
+              <app-profile-details *ngIf="showSecretSantaProfile" [profiledata]="SecretSantaProfile"></app-profile-details>
+              <!-- <app-wishlist-details *ngIf="showSecretSantaWishList" [wishlist]="SecretSantaWishList" ></app-wishlist-details> -->
 
             </div>
 

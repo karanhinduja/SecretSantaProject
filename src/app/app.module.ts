@@ -13,6 +13,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { PagesModule } from './pages/pages.module';
+import { NotificationComponent } from './components/notification/notification.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,7 @@ import { PagesModule } from './pages/pages.module';
         LayoutComponent,
         FooterComponent,
         LoginComponent,
-        RegistrationComponent,
+        RegistrationComponent
     ],
     imports: [
         BrowserAnimationsModule,
@@ -31,7 +32,7 @@ import { PagesModule } from './pages/pages.module';
         AppRoutingModule,
         ComponentsModule,
         PagesModule,
-        ReactiveFormsModule 
+        ReactiveFormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

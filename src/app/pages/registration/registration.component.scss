@@ -4,3 +4,19 @@
 .form-control option{
      color:#2c2c2c;
 }
+
+::ng-deep .page-header
+{
+    height: 118vh !important;
+}
+
+::ng-deep .dropdown-menu .dropdown-item:hover, 
+::ng-deep .dropdown-menu .dropdown-item:focus{
+    color:#000;
+}
+
+::ng-deep .dropdown-item.active, 
+::ng-deep .dropdown-item:active
+{
+    background-color: #f96332d9;
+}

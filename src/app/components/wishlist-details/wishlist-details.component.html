@@ -1,44 +1,36 @@
-<form class="form" method="" action="">
-
+<form class="form" [formGroup]="wishForm" (ngSubmit)="onSubmit()">
   <div class="row justify-content-center">
     <div class="col-md-6 col-12">
-      <div class="table-responsive">
+      <ul class="list-group list-group-flush">
+        <!-- <li *ngFor="let item of wishListFormated; let i = index;" class="list-group-item">
+          <div class="row">
+            <div class="col-2"><label class="form-control">{{i + 1}}</label></div>
+            <div class="col-10">
+              <textarea [disabled]="!enableAction" 
+                        class="form-control" 
+                        placeholder="{{item.placeHolder}}">{{item.value}}</textarea>
+            </div>
+          </div>
+        </li> -->
 
-        <table class="table">
-          <thead class="text-primary">
-            <tr>
-              <th>Wish Sr. No.</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>
-                <div class="input-group">
-                  <textarea class="form-control" placeholder="Wish 1..."></textarea>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>
-                <div class="input-group">
-                  <textarea class="form-control" placeholder="Wish 1..."></textarea>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>
-                <div class="input-group">
-                  <textarea class="form-control" placeholder="Wish 1..."></textarea>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        <li formArrayName="list" *ngFor="let item of wishForm.get('list').controls; let i = index;" class="list-group-item">
+          <div class="row">
+            <div class="col-2"><label class="form-control">{{i + 1}}</label></div>
+            <div class="col-10" [formGroupName]="i">
+              <textarea [disabled]="!enableAction" formControlName="Description"
+                        class="form-control" 
+                        placeholder="Wish{{i + 1}}..."></textarea>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="row justify-content-center" *ngIf="enableAction">
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary btn-sm">Save WishList</button>
+      <button class="btn btn-sm">Clear</button>
     </div>
   </div>
 </form>

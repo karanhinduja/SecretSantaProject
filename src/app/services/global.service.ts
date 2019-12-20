@@ -1,17 +1,21 @@
 import { Injectable } from '@angular/core';
 import { catchError, map, tap } from 'rxjs/operators';
-import { Observable, of } from 'rxjs';
+import { Observable, of, Subject } from 'rxjs';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { IAlert } from 'app/components/notification/notification.component';
 
 @Injectable({
     providedIn: 'root',
 })
 export class GlobalService {
 
-    public apiUrl: string = 'https://us-central1-secretsanta-397f9.cloudfunctions.net/app/api/';
+    private apiUrl: string = 'http://localhost:5000/secretsantadb-7faa5/us-central1/webApi/api/v1/';//https://us-central1-secretsanta-397f9.cloudfunctions.net/app/api/v1/';
+
+    private subject = new Subject<any>();
+
     constructor(private http: HttpClient) { }
 
-    httpCall(method: string, url: string, data: any, httpOptions?: any): Observable<any> {
+    httpCall(method: string, url: string, data?: any, httpOptions?: any): Observable<any> {
         if (!httpOptions) {
             httpOptions = {
                 headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -39,6 +43,13 @@ export class GlobalService {
             // TODO: better job of transforming error for user consumption
             this.log(`${operation} failed: ${error.message}`);
 
+            this.ShowHideNotification({
+                id: 1,
+                type: 'danger',
+                strong: '!!Oh snap!!!',
+                message: error.details,
+                icon: 'objects_support-17'
+            });
             // Let the app keep running by returning an empty result.
             return of(result as T);
         };
@@ -49,5 +60,14 @@ export class GlobalService {
         console.log(message);
         //this.messageService.add(`HeroService: ${message}`);
     }
+    
+    ShowHideNotification(data:IAlert) {
+        this.subject.next(data);
+    }
+
+    GetNotificationData(): Observable<any> {
+        return this.subject.asObservable();
+    }
+
 
 }

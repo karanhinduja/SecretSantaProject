@@ -16,6 +16,7 @@ export class PagesComponent implements OnInit {
   constructor(private renderer: Renderer, private router: Router, @Inject(DOCUMENT) private document: any, private element: ElementRef, public location: Location) { }
   ngOnInit() {
 
+    window.scrollTo({top:0});
     var navbar: HTMLElement = this.element.nativeElement.children[0].children[0];
 
     this.renderer.listenGlobal('window', 'scroll', (event) => {
@@ -23,7 +24,7 @@ export class PagesComponent implements OnInit {
       var _location = this.location.path();
       _location = _location.split('/')[2];
 
-      if (number > 150 || window.pageYOffset > 150) {
+      if (number > 50 || window.pageYOffset > 50) {
         navbar.classList.remove('navbar-transparent');
       } else if (_location !== 'login' && this.location.path() !== '/nucleoicons') {
         // remove logic

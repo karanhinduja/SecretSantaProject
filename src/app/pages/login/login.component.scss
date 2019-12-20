@@ -1,3 +1,8 @@
 .form-control{
     height: auto;
 }
+
+::ng-deep .page-header
+{
+    height: 100vh !important;
+}

@@ -31,3 +31,12 @@
     max-height:100%;
 
 }
+
+::ng-deep ngb-alert.alert
+{
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top:0;
+    left:0;
+}
