@@ -13,7 +13,7 @@
           </div>
         </li> -->
 
-        <li formArrayName="list" *ngFor="let item of wishForm.get('list').controls; let i = index;" class="list-group-item">
+        <li formArrayName="list" *ngFor="let item of wishForm.get('list')['controls']; let i = index;" class="list-group-item">
           <div class="row">
             <div class="col-2"><label class="form-control">{{i + 1}}</label></div>
             <div class="col-10" [formGroupName]="i">

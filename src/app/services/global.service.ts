@@ -9,7 +9,7 @@ import { IAlert } from 'app/components/notification/notification.component';
 })
 export class GlobalService {
 
-    private apiUrl: string = 'http://localhost:5000/secretsantadb-7faa5/us-central1/webApi/api/v1/';//https://us-central1-secretsanta-397f9.cloudfunctions.net/app/api/v1/';
+    private apiUrl: string = 'https://us-central1-secretsantadb-7faa5.cloudfunctions.net/webApi/api/v1/';//https://us-central1-secretsanta-397f9.cloudfunctions.net/app/api/v1/';
 
     private subject = new Subject<any>();
 

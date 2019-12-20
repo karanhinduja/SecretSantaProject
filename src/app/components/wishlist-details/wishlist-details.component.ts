@@ -54,7 +54,7 @@ export class WishlistDetailsComponent implements OnInit {
       Description: value
     });
   }
-  onSubmit(event) {
+  onSubmit() {
     // console.log(this.wishForm.value);
     this.emitOnSubmit.emit(this.wishForm.value);
   }
