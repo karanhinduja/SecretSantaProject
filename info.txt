@@ -1,6 +1,6 @@
 ng build --prod --base-href 'https://karanhinduja.github.io/SecretSantaProject/'
 
-git subtree push --prefix dist origin gh-pages
+git subtree push --prefix dist SecretSantaProject gh-pages
 
 https://gist.github.com/cobyism/4730490
 https://itnext.io/create-your-website-for-free-with-github-pages-angular-4a932a2de309
