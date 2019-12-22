@@ -14,6 +14,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { PagesModule } from './pages/pages.module';
 import { NotificationComponent } from './components/notification/notification.component';
+// import { CountdownTimerModule  } from 'ngx-countdown-timer';
 
 @NgModule({
     declarations: [
@@ -32,7 +33,8 @@ import { NotificationComponent } from './components/notification/notification.co
         AppRoutingModule,
         ComponentsModule,
         PagesModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        // CountdownTimerModule.forRoot() 
     ],
     providers: [],
     bootstrap: [AppComponent]

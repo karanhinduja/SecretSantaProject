@@ -7,15 +7,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 // import { AgmCoreModule } from '@agm/core';
 
-
-import { LoginComponent } from './login/login.component';
-import { RegistrationComponent } from './registration/registration.component';
 import { PagesComponent } from './pages.component';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from 'app/shared/navbar/navbar.component';
 import { ProfileDetailsComponent } from 'app/components/profile-details/profile-details.component';
 import { WishlistDetailsComponent } from 'app/components/wishlist-details/wishlist-details.component';
+import { CountdownTimerModule } from 'ngx-countdown-timer';
+
 
 @NgModule({
     imports: [
@@ -26,7 +25,8 @@ import { WishlistDetailsComponent } from 'app/components/wishlist-details/wishli
         NouisliderModule,
         JwBootstrapSwitchNg2Module,
         RouterModule,
-        HttpClientModule
+        HttpClientModule,
+        CountdownTimerModule.forRoot() 
         // PagesRoutingModule,
         // AgmCoreModule.forRoot({
         //     apiKey: 'YOUR_KEY_HERE'
